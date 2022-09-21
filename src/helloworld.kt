@@ -1,3 +1,4 @@
 fun main(args: Array<String>) {
-    println("Hello, world!")
+    val isUnit = println("This is an expression")
+    println(isUnit)
 }
