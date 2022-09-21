@@ -1,9 +1,8 @@
  fun main() {
-
-     println(updateDirty(15, ::increaseDirty))
+     var dirtyLevel = 19
+     dirtyLevel = updateDirty(dirtyLevel) { dirtyLevel -> dirtyLevel + 23}
+     println(dirtyLevel)
  }
-
- fun updateDirty(dirty: Int, operation: (Int) -> Int): Int {
-     return operation(dirty)
- }
- fun increaseDirty( start: Int ) = start + 1
+  fun updateDirty(dirty: Int, operation: (Int) -> Int): Int {
+      return operation(dirty)
+  }
